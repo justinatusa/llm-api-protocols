@@ -6,7 +6,7 @@
 
 | 层 | 文件 | 内容 |
 |---|---|---|
-| 0 | [docs/llm-api-protocols.md](docs/llm-api-protocols.md) | 五种格式、第三方怎么分叉、容易记混的名字、停止/流式/报错/断开的要点、怎么选 |
+| 0 | [docs/llm-api-protocols.md](docs/llm-api-protocols.md) | 开篇要先搞清的 4 件事和常用词、五种格式、第三方怎么分叉、容易记混的名字、停止/流式/报错/断开的要点、怎么选 |
 | 1 | [docs/field-atlas.md](docs/field-atlas.md) | 同一个意思在各家叫什么、放哪、默认值；重点字段 |
 | 2 | [docs/details/](docs/details/) | 工具调用示例、原生格式细节、第三方厂商、流式与断开、缓存、Claude 云托管、错误与限流、冲突与未核实、来源 |
 | — | [docs/taxonomy.md](docs/taxonomy.md) | 为什么这么分类 |

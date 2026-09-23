@@ -1,6 +1,6 @@
 # Claude 的云托管版本（Bedrock / Vertex / Azure Foundry）
 
-> 方括号里是来源键，见文末；“冲突”“未核实”汇总在 [冲突与未核实](conflicts.md)。
+> 链接文字写明来源的厂商和文档，完整列表见 [来源](sources.md)；“冲突”“未核实”汇总在 [冲突与未核实](conflicts.md)。
 
 同样是 Anthropic Messages，放到云厂商上，地址、`model` 位置、版本号、流式格式都会变。
 
@@ -13,7 +13,7 @@
 | beta 功能 | 头 `anthropic-beta` | body `anthropic_beta`（字符串数组） | 未核实 | 头 `anthropic-beta` |
 | 流式 | SSE | AWS event-stream 编码（`application/vnd.amazon.eventstream`） | 走 `:streamRawPredict` | SSE |
 
-来源：[an-msg][bedrock-invoke][bedrock-msg][bedrock-params][an-bedrock][vx-claude][an-vertex][az-claude][az-claude-use]。Bedrock 另有 `/anthropic/v1/messages` 路由：`model` 写在 body，用官方 `anthropic-version` 头和 SSE，不是上表的 eventstream [bedrock-msg]。Bedrock 的 `Converse` 是 AWS 自己的格式：工具块写成 `{toolUse: ...}`，不是 `{type:"tool_use"}`，不算五种格式之一 [bedrock-converse]。
+来源：[Anthropic Messages 参考][an-msg]；[AWS Bedrock InvokeModel 参考][bedrock-invoke]；[AWS Bedrock Messages API 文档][bedrock-msg]；[AWS Bedrock Claude 请求参数文档][bedrock-params]；[Anthropic 旧版 Bedrock 说明][an-bedrock]；[Vertex AI Claude 使用指南][vx-claude]；[Anthropic Vertex AI 说明][an-vertex]；[Azure Foundry Claude 模型说明][az-claude]；[Azure Foundry Claude 使用指南][az-claude-use]。Bedrock 另有 `/anthropic/v1/messages` 路由：`model` 写在 body，用官方 `anthropic-version` 头和 SSE，不是上表的 eventstream（[AWS Bedrock Messages API 文档][bedrock-msg]）。Bedrock 的 `Converse` 是 AWS 自己的格式：工具块写成 `{toolUse: ...}`，不是 `{type:"tool_use"}`，不算五种格式之一（[AWS Bedrock Converse 文档][bedrock-converse]）。
 
 功能支持差异（✓ 支持，✗ 不支持，— 没写）：
 
@@ -28,7 +28,7 @@
 | 结构化输出 | ✓ | Anthropic 旧页写 ✓，AWS 页只写 4 个型号 ✓（冲突，[冲突与未核实](conflicts.md)） | ✗（传 `output_config.format` 会 400） | ✓ | ✓ |
 | 单请求上限 | 32 MB | 20 MB 与 API 参考的 25000000 不一致（[冲突与未核实](conflicts.md)） | — | 30 MB | — |
 
-来源：[an-batch][an-files][an-websearch][an-webfetch][an-codeexec][an-count][an-so][an-bedrock][an-bedrock-mantle][bedrock-invoke][bedrock-count][bedrock-so][an-vertex][vx-claude-batch][vx-claude-count][az-claude]。
+来源：[Anthropic 批处理文档][an-batch]；[Anthropic Files API 参考][an-files]；[Anthropic 网页搜索工具文档][an-websearch]；[Anthropic 网页抓取工具文档][an-webfetch]；[Anthropic 代码执行工具文档][an-codeexec]；[Anthropic token 计数文档][an-count]；[Anthropic 结构化输出文档][an-so]；[Anthropic 旧版 Bedrock 说明][an-bedrock]；[Anthropic Bedrock 说明（Messages 路由）][an-bedrock-mantle]；[AWS Bedrock InvokeModel 参考][bedrock-invoke]；[AWS Bedrock CountTokens 文档][bedrock-count]；[AWS Bedrock Claude 结构化输出文档][bedrock-so]；[Anthropic Vertex AI 说明][an-vertex]；[Vertex AI Claude 批量预测文档][vx-claude-batch]；[Vertex AI Claude token 计数文档][vx-claude-count]；[Azure Foundry Claude 模型说明][az-claude]。
 
 ---
 

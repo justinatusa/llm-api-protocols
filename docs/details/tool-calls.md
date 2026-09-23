@@ -1,9 +1,9 @@
 # 工具调用示例
 
-> 五种原生格式在“模型调了一次工具、你把结果带回去”这一轮的最小请求体。字段含义的对照表在 [字段对照 · 工具](../field-atlas.md)。
-> 方括号里是来源键，见文末；“冲突”“未核实”汇总在 [冲突与未核实](conflicts.md)。
+> 五种原生格式在“模型调了一次工具、你把结果带回去”这一轮的最小请求体。字段含义的对照表在 [字段对照 · 工具](../field-atlas.md#2-工具-重点)。
+> 链接文字写明来源的厂商和文档，完整列表见 [来源](sources.md)；“冲突”“未核实”汇总在 [冲突与未核实](conflicts.md)。
 
-第二轮请求体最小示例如下（都是合法 JSON）[oa-fc][oa-migrate][an-tools][an-handle][g-fc][g-int-api][g-int-qs]。
+第二轮请求体最小示例如下（都是合法 JSON）（[OpenAI 函数调用指南][oa-fc]；[OpenAI 迁移到 Responses 指南][oa-migrate]；[Anthropic 定义工具文档][an-tools]；[Anthropic 处理工具调用指南][an-handle]；[Gemini generateContent 函数调用指南][g-fc]；[Gemini Interactions 参考][g-int-api]；[Gemini Interactions 快速入门][g-int-qs]）。
 
 Chat Completions：
 

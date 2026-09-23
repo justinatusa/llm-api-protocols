@@ -46,7 +46,7 @@
 | Kimi | ✓ | ✓ 仅 `kimi-k3`，不存对话 | ✓（参考页仅 `kimi-k3`，接入指南与之冲突） | 采样参数固定，乱传报错；`strict` 默认开 |
 | xAI Grok | ✓（已标 Deprecated） | ★ 存对话 | 已废弃 | grok-4.5 起推理关不掉；`strict` 始终开；批处理只有部分文本模型 8 折 |
 | Qwen | ✓ | ✓ 存对话 | ✓ | `tool_choice: required` 三处官方页说法冲突；`parallel_tool_calls` 默认 false；Anthropic 入口签名为空 |
-| MiniMax | ✓ | ✓ 请求里没有 `previous_response_id` | ★ | 思考默认值随入口不同（见 [字段对照 · 推理](field-atlas.md)）；`<think>` 不能剥 |
+| MiniMax | ✓ | ✓ 请求里没有 `previous_response_id` | ★ | 思考默认值随入口不同（见 [字段对照 · 推理](field-atlas.md#5-推理思考怎么开要不要回传-重点)）；`<think>` 不能剥 |
 | 豆包 | ✓ | ✓ 存对话 | ✓ | 新模型不回传 `encrypted_content` 会降低推理质量（不报错），密文被篡改则无法还原 |
 | Azure（Foundry） | ✓ | ✓ | ✓ 仅 Claude 模型，另一地址 | `model` 填部署名；`api-key` 头；`retry-after-ms` |
 
